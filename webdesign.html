@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marbl web</title>
+
+<link rel="stylesheet" href="style.css">
+
+   
+</head>
+<body>
+    
+<header>
+
+    <a href="#" class="logo">̷M̷̷ Z̷</a>
+    <nav>
+        <a href="#home" style="--clr:#fff;" class="active">Home</a>
+        <a href="#Products" style="--clr:brown;">Products</a>
+        <a href="#About" style="--clr:burlywood;">About</a>
+        <a href="#contact" style="--clr:#fd79a8;">Contact</a>
+    </nav>
+</header>
+   <section id="home" style="--clr:rgb(255, 255, 255);">
+
+   
+    <div class="curved">
+<div class="heding">
+        <h1>Maaz Enterprises</h1>
+        
+        <p>Discover the elegance of soapstone for your home and projects with superior quality and craftsmanship.</p>
+    </div>
+        <div class="card">
+<div class="wrapper">
+    <div class="single-card">
+        <div class="front"></div>
+        <div class="back">
+            <div class="contant">
+                <!-- <h2>Name Of Owner</h2> -->
+                <a href="#Products" class="btn">See Products</a>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>  
+          <svg class="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 318"><path fill="brown" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,160C672,149,768,75,864,90.7C960,107,1056,213,1152,229.3C1248,245,1344,171,1392,133.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+   </section>
+
+
+
+<section id="Products" class="Product-page" style="--clr:brown;" >
+    <div class="shape left"></div>
+    <div class="shape right"></div>
+<!-- Cards -->
+<div class="product-container">
+    <!-- Product Card 1 -->
+    <div class="product-card">
+        <div class="imgBx">
+            <img src="path/to/image1.jpg" alt="Product Image 1">
+        </div>
+        <div class="contant product-card-content">
+            <h2>Product</h2>
+            <a href="#" class="btn">See Products</a>
+        </div>
+    </div>
+    <!-- Product Card 2 -->
+    <div class="product-card">
+        <div class="imgBx">
+            <img src="path/to/image2.jpg" alt="Product Image 2">
+        </div>
+        <div class="contant product-card-content">
+            <h2>Product</h2>
+            <a href="#" class="btn">See Products</a>
+        </div>
+    </div>
+    <!-- Product Card 3 -->
+    <div class="product-card">
+        <div class="imgBx">
+            <img src="path/to/image3.jpg" alt="Product Image 3">
+        </div>
+        <div class="contant product-card-content">
+            <h2>Product</h2>
+            <a href="#" class="btn">See Products</a>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+
+
+<section id="About" style="--clr:burlywood;">About</section>
+<section id="contact" style="--clr:#fd79a8;">Contact</section>
+
+
+
+<script>
+
+
+// card back side buttons animation
+
+document.addEventListener('DOMContentLoaded', function(){
+    let btns = document.querySelectorAll('.btn');
+    btns.forEach(function(btn){
+        let spans = [];
+        for(let i=0;i<120;i++){
+            let span = document.createElement('span');
+            span.style.left = `${i * 1.7}px`
+            spans.push(span)
+            btn.appendChild(span);
+let randomDelay = (Math.random() * 1) + 0;
+span.style.transitionDelay = randomDelay + 's';
+        }
+    })
+})
+
+
+// nav bar section 
+
+let sec = document.querySelectorAll('section')
+let  links = document.querySelectorAll('nav a')
+
+
+
+window.onscroll = () => {
+
+    sec.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 70;
+        let height = section.offsetHeight;
+let id = section.getAttribute('id')
+
+if (top >= offset && top < offset + height) {
+    links.forEach(link => {
+        link.classList.remove('active')
+        document.querySelector('nav a[href*= '+ id +']').classList.add('active');
+    });
+};
+
+    });
+};
+
+
+// scroll see magic
+
+let left = document.querySelector('.left');
+let right = document.querySelector('.right');
+let productsSection = document.querySelector('#Products');
+
+let animationStarted = false; // To prevent animation from starting prematurely
+
+window.addEventListener('scroll', function () {
+    // Get dimensions and positions
+    let sectionTop = productsSection.offsetTop; // Top position of Products section
+    let sectionHeight = productsSection.offsetHeight; // Height of Products section
+    let scrollY = window.scrollY; // Current scroll position
+    let windowHeight = window.innerHeight; // Viewport height
+
+    // Calculate when Products section starts scrolling
+    let startScrollTrigger = sectionTop; // Top of Products section
+    let endScrollTrigger = sectionTop + sectionHeight; // Bottom of Products section
+
+    // Start animation ONLY when user scrolls within Products section
+    if (scrollY >= startScrollTrigger && scrollY <= endScrollTrigger) {
+        animationStarted = true; // Animation starts
+        // Calculate progress (based on how much user has scrolled within the Products section)
+        let progress = ((scrollY - startScrollTrigger) / sectionHeight) * 100;
+
+        // Apply animation progress
+        left.style.borderBottomRightRadius = progress + '%';
+        right.style.borderBottomLeftRadius = progress + '%';
+    } else if (scrollY < startScrollTrigger) {
+        // Reset animation if scrolling back up before Products section
+        animationStarted = false; // Prevent early animation
+        left.style.borderBottomRightRadius = '0%';
+        right.style.borderBottomLeftRadius = '0%';
+    } else if (scrollY > endScrollTrigger) {
+        // Ensure animation is fully applied if user scrolls past Products section
+        left.style.borderBottomRightRadius = '100%';
+        right.style.borderBottomLeftRadius = '100%';
+    }
+});
+
+
+</script>
+</body>
+</html>
