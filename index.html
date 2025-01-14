@@ -3,104 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Marbl web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<link rel="stylesheet" href="style.css">
-
-   
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
     
-<header>
-
+<header data-aos="fade-down" data-aos-duration="2000">
     <a href="#" class="logo">̷M̷̷ Z̷</a>
     <nav>
         <a href="#home" style="--clr:#fff;" class="active">Home</a>
         <a href="#Products" style="--clr:brown;">Products</a>
-        <a href="#About" style="--clr:burlywood;">About</a>
-        <a href="#contact" style="--clr:#fd79a8;">Contact</a>
+        <a href="#About" style="--clr:#fff;">About</a>
+        <a href="#contact" style="--clr:var(--olive-green);">Contact</a>
     </nav>
 </header>
-   <section id="home" style="--clr:rgb(255, 255, 255);">
 
-   
+<section id="home" class="sec-1 show-animation" style="--clr:rgb(255, 255, 255);">
     <div class="curved">
-<div class="heding">
-        <h1>Maaz Enterprises</h1>
-        
-        <p>Discover the elegance of soapstone for your home and projects with superior quality and craftsmanship.</p>
-    </div>
-        <div class="card">
-<div class="wrapper">
-    <div class="single-card">
-        <div class="front"></div>
-        <div class="back">
-            <div class="contant">
-                <!-- <h2>Name Of Owner</h2> -->
-                <a href="#Products" class="btn">See Products</a>
-                <a href="#contact" class="btn">Contact Us</a>
+        <div class="heding animate" data-aos="fade-right" data-aos-duration="2000">
+            <h1 >Maaz <span class="enterprize" > Enterprises </span></h1>
+            <p>Discover the elegance of soapstone for your home and projects with superior quality and craftsmanship.</p>
+        </div>
+        <div class="card" data-aos="fade-flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        data-aos-delay="500">
+            <div class="wrapper">
+                <div class="single-card">
+                    <div class="front"></div>
+                    <div class="back">
+                        <div class="contant">
+                            <a href="#Products" class="btn">See Products</a>
+                            <a href="#contact" class="btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <svg data-aos="fade-up" data-aos-duration="2000" class="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 318">
+        <path fill="brown" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,160C672,149,768,75,864,90.7C960,107,1056,213,1152,229.3C1248,245,1344,171,1392,133.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+</section>
+
+<section id="Products" class="Product-page sec-2" style="--clr:brown;">
+    <div class="shape left-one"></div>
+<div class="shape left-two"></div>
+<div class="shape right-one"></div>
+<div class="shape right-two"></div>
+
+    <!-- Cards -->
+    <div class="product-container">
+        <!-- Product Card 1 -->
+        <div class="product-card" data-aos="fade-up-left" data-aos-delay="100" data-aos-duration="1000">
+            <div class="imgBx">
+                <img src="path/to/image1.jpg" alt="Product Image 1">
+            </div>
+            <div class="contant product-card-content">
+                <h2>Product</h2>
+                <a href="#" class="btn">See Products</a>
+            </div>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <div class="imgBx">
+                <img src="path/to/image2.jpg" alt="Product Image 2">
+            </div>
+            <div class="contant product-card-content">
+                <h2>Product</h2>
+                <a href="#" class="btn">See Products</a>
+            </div>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="product-card" data-aos="fade-up-right" data-aos-delay="100" data-aos-duration="1000">
+            <div class="imgBx">
+                <img src="path/to/image3.jpg" alt="Product Image 3">
+            </div>
+            <div class="contant product-card-content">
+                <h2>Product</h2>
+                <a href="#" class="btn">See Products</a>
             </div>
         </div>
     </div>
+</section>
+
+<section id="About" class="sec-3" style="--clr:#fff;">
+    <div class="about-page">
+        <div class="about-contant">
+        <h2 data-aos="fade-up" data-aos-duration="1000">About</h2>
+        <p data-aos="fade-up" data-aos-duration="1000">At Maaz Enterprises, we specialize in high-quality soapstone for various applications including countertops, fireplaces, sinks, and custom pieces. We combine expert craftsmanship with the finest materials to deliver products that elevate your space.</p>
+    
+        <h2 data-aos="fade-up" data-aos-duration="1000">Why Choose Us?</h2>
+        <ul >
+            <li data-aos="fade-up"  data-aos-delay="500" data-aos-duration="1000"><i class="fas fa-check "></i> Handcrafted products with precision and care.</li>
+            <li data-aos="fade-up"  data-aos-delay="600" data-aos-duration="1000"><i class="fas fa-check "></i> Custom designs tailored to your needs.</li>
+            <li data-aos="fade-up"  data-aos-delay="700" data-aos-duration="1000"><i class="fas fa-check "></i> Excellent customer service every step of the way.</li>
+            <li data-aos="fade-up"  data-aos-delay="800" data-aos-duration="1000"><i class="fas fa-check "></i> Top-quality soapstone from trusted suppliers.</li>
+        </ul>
+    
+    </div>
+        <span class="skewedOne"></span>
+        <span class="skewedTwo"></span>
+    </div>
+</section>
+
+<section id="contact" class="sec-4" style="--clr:var(--olive-green);">
+    <h2 data-aos="fade-up"  data-aos-delay="500" data-aos-duration="1000" class="section-title">Contact Us</h2>
+<div class="contact-info">
+  <p data-aos="fade-up"  data-aos-delay="600" data-aos-duration="1000"><i class="fas fa-envelope"></i> info@maazenterprises.com</p>
+  <p data-aos="fade-up"  data-aos-delay="700" data-aos-duration="1000"><i class="fas fa-phone"></i> +92 333 2428165</p>
+  <p data-aos="fade-up"  data-aos-delay="800" data-aos-duration="1000"><i class="fas fa-map-marker-alt"></i> 123 Soapstone Street, New York, Pakistan</p>
 </div>
-
-        </div>
-
-    </div>  
-          <svg class="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 318"><path fill="brown" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,160C672,149,768,75,864,90.7C960,107,1056,213,1152,229.3C1248,245,1344,171,1392,133.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-
-   </section>
-
-
-
-<section id="Products" class="Product-page" style="--clr:brown;" >
-    <div class="shape left"></div>
-    <div class="shape right"></div>
-<!-- Cards -->
-<div class="product-container">
-    <!-- Product Card 1 -->
-    <div class="product-card">
-        <div class="imgBx">
-            <img src="path/to/image1.jpg" alt="Product Image 1">
-        </div>
-        <div class="contant product-card-content">
-            <h2>Product</h2>
-            <a href="#" class="btn">See Products</a>
-        </div>
-    </div>
-    <!-- Product Card 2 -->
-    <div class="product-card">
-        <div class="imgBx">
-            <img src="path/to/image2.jpg" alt="Product Image 2">
-        </div>
-        <div class="contant product-card-content">
-            <h2>Product</h2>
-            <a href="#" class="btn">See Products</a>
-        </div>
-    </div>
-    <!-- Product Card 3 -->
-    <div class="product-card">
-        <div class="imgBx">
-            <img src="path/to/image3.jpg" alt="Product Image 3">
-        </div>
-        <div class="contant product-card-content">
-            <h2>Product</h2>
-            <a href="#" class="btn">See Products</a>
-        </div>
-    </div>
-</div>
-
 
 </section>
 
 
-
-<section id="About" style="--clr:burlywood;">About</section>
-<section id="contact" style="--clr:#fd79a8;">Contact</section>
-
-
-
+<footer   class="footer text-white py-6" style="--clr:brown;">
+  <div  class="container mx-auto text-center">
+    <div class="social-icons mb-4">
+      <a href="https://facebook.com" target="_blank" class="social-icon">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="social-icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <p class="copyright text-xs md:text-sm">&copy; 2025 Maaz Enterprises</p>
+  </div>
+</footer>
 <script>
+// Initialize AOS
+AOS.init();
+
 
 
 // card back side buttons animation
@@ -147,45 +191,95 @@ if (top >= offset && top < offset + height) {
 };
 
 
-// scroll see magic
+// scroll see magic product section
 
-let left = document.querySelector('.left');
-let right = document.querySelector('.right');
+let leftOne = document.querySelector('.left-one');
+let leftTwo = document.querySelector('.left-two');
+let rightOne = document.querySelector('.right-one');
+let rightTwo = document.querySelector('.right-two');
 let productsSection = document.querySelector('#Products');
-
-let animationStarted = false; // To prevent animation from starting prematurely
 
 window.addEventListener('scroll', function () {
     // Get dimensions and positions
     let sectionTop = productsSection.offsetTop; // Top position of Products section
     let sectionHeight = productsSection.offsetHeight; // Height of Products section
     let scrollY = window.scrollY; // Current scroll position
-    let windowHeight = window.innerHeight; // Viewport height
 
-    // Calculate when Products section starts scrolling
-    let startScrollTrigger = sectionTop; // Top of Products section
-    let endScrollTrigger = sectionTop + sectionHeight; // Bottom of Products section
+    // Calculate progress (how much user has scrolled within the Products section)
+    let progress = ((scrollY - sectionTop) / sectionHeight) * 100;
 
-    // Start animation ONLY when user scrolls within Products section
-    if (scrollY >= startScrollTrigger && scrollY <= endScrollTrigger) {
-        animationStarted = true; // Animation starts
-        // Calculate progress (based on how much user has scrolled within the Products section)
-        let progress = ((scrollY - startScrollTrigger) / sectionHeight) * 100;
+    if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
+        let radiusProgress = Math.min(progress, 100); // Ensure radius doesn't exceed 100%
 
-        // Apply animation progress
-        left.style.borderBottomRightRadius = progress + '%';
-        right.style.borderBottomLeftRadius = progress + '%';
-    } else if (scrollY < startScrollTrigger) {
-        // Reset animation if scrolling back up before Products section
-        animationStarted = false; // Prevent early animation
-        left.style.borderBottomRightRadius = '0%';
-        right.style.borderBottomLeftRadius = '0%';
-    } else if (scrollY > endScrollTrigger) {
-        // Ensure animation is fully applied if user scrolls past Products section
-        left.style.borderBottomRightRadius = '100%';
-        right.style.borderBottomLeftRadius = '100%';
+        // Apply border radius
+        leftOne.style.borderBottomRightRadius = radiusProgress + '%';
+        leftTwo.style.borderBottomRightRadius = radiusProgress + '%';
+        leftTwo.style.borderBottomLeftRadius = radiusProgress + '%';
+        rightOne.style.borderBottomLeftRadius = radiusProgress + '%';
+        rightOne.style.borderBottomRightRadius = radiusProgress + '%';
+        rightTwo.style.borderBottomLeftRadius = radiusProgress + '%';
+
+        // Apply upward movement for leftTwo and rightOne
+        let translateProgress = Math.min(progress, 80); // Limit movement to 50% of progress
+        leftTwo.style.transform = `translateY(-${translateProgress}px)`;
+        rightOne.style.transform = `translateY(-${translateProgress}px)`;
+    } else if (scrollY < sectionTop) {
+        // Reset if above the Products section
+        leftOne.style.borderBottomRightRadius = '0%';
+        leftTwo.style.borderBottomRightRadius = '0%';
+        leftTwo.style.borderBottomLeftRadius = '0%';
+        rightOne.style.borderBottomLeftRadius = '0%';
+        rightOne.style.borderBottomRightRadius = '0%';
+        rightTwo.style.borderBottomLeftRadius = '0%';
+
+        leftTwo.style.transform = `translateY(0px)`;
+        rightOne.style.transform = `translateY(0px)`;
+    } else if (scrollY > sectionTop + sectionHeight) {
+        // Ensure max radius if past the Products section
+        leftOne.style.borderBottomRightRadius = '110%';
+        leftTwo.style.borderBottomRightRadius = '110%';
+        leftTwo.style.borderBottomLeftRadius = '110%';
+        rightOne.style.borderBottomLeftRadius = '110%';
+        rightOne.style.borderBottomRightRadius = '110%';
+        rightTwo.style.borderBottomLeftRadius = '110%';
+
+        leftTwo.style.transform = `translateY(-70px)`; // Final position for leftTwo
+        rightOne.style.transform = `translateY(-70px)`; // Final position for rightOne
     }
 });
+
+
+// about section 
+// Elements for the skew effect
+const skewedOne = document.querySelector('.skewedOne');
+const skewedTwo = document.querySelector('.skewedTwo');
+const aboutSection = document.querySelector('#About'); // About section element
+
+window.addEventListener('scroll', function () {
+    // Get dimensions and positions for About section
+    let aboutTop = aboutSection.offsetTop; // Top position of About section
+    let aboutHeight = aboutSection.offsetHeight; // Height of About section
+    let scrollY = window.scrollY; // Current scroll position
+    let windowHeight = window.innerHeight; // Viewport height
+
+    // Calculate when About section starts scrolling
+    let startScrollTrigger = aboutTop; // Top of About section
+    let endScrollTrigger = aboutTop + aboutHeight; // Bottom of About section
+
+    // Apply skew effect ONLY when user scrolls within About section
+    if (scrollY >= startScrollTrigger && scrollY <= endScrollTrigger) {
+        const value1 = -10 + (scrollY - startScrollTrigger) / 60;
+        const value2 = 10 - (scrollY - startScrollTrigger) / 60;
+
+        skewedOne.style.transform = "skewY(" + value1 + "deg)";
+        skewedTwo.style.transform = "skewY(" + value2 + "deg)";
+    } else {
+        // Reset skew effect if outside About section
+        skewedOne.style.transform = "skewY(-10deg)";
+        skewedTwo.style.transform = "skewY(10deg)";
+    }
+});
+
 
 
 </script>
