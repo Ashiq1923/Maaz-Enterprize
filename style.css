@@ -172,7 +172,7 @@ background-position: center center;
     position: absolute;
     border-radius: 50px;
     height: 400px;
-    background: brown;
+    background: rgba(58, 0, 0, 0.884);
 
 }
 .contant{
@@ -212,8 +212,8 @@ background-position: center center;
 
 .contant .btn {
     position: relative;
-    width: 200px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,16 +221,18 @@ background-position: center center;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
-    font-size: 18px;
-    transition: 0.2s;
-    color: #e50914;
+    font-size: 10px;
+    transition: 0.1s;
+    font-weight: bolder;
+    color: rgb(230, 56, 56);
 text-decoration: none;
 transition-delay: 0.6s;
 }
 .btn:hover{
-    filter: drop-shadow(0 0 8px #e50914) drop-shadow(0 0 25px #e50914);
+    filter: drop-shadow(0 0 8px brown) drop-shadow(0 0 25px brown);
     letter-spacing: 0.2em;
     color: #fff;
+    border: 1px solid black;
 }
 
 .btn span{
@@ -238,7 +240,7 @@ transition-delay: 0.6s;
     top: 0;
     width: 2.5px;
     height: 100%;
-    background: #e50914;
+    background: brown;
     pointer-events: none;
     transition: transform 0.1s ease-in-out;
     z-index: -1;
@@ -312,17 +314,58 @@ transition-delay: 0.6s;
 
 /* products cards */
 .product-container {
-    margin: 0 30px;
+    /* margin: 0 30px; */
     width: 100%;
-    height: 80%;
+    height: 90%;
     position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+align-items: center;
+    gap: 20px;
     flex-wrap: wrap;
     padding: 100px 50px;
     overflow: hidden;
+    transform-style: preserve-3d;
 }
+
+.product-container .box {
+position: relative;
+width: 200px;
+height: 200px;
+
+transition: 0.5s;
+transform-origin: bottom center;
+-webkit-box-reflect: below 1px linear-gradient(transparent,#0002) ;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* .product-container .box span {
+    font-size: 4em;
+    font-weight: ;
+} */
+
+.product-container .box.prev {
+    margin: 0 0px;
+transform: perspective(500px) rotateY(45deg) scale(0.95);
+filter: drop-shadow(0 0 25px #0005) drop-shadow(0 0 45px #0005) 
+}
+
+.product-container .box.next {
+    margin: 0 0px;
+    transform: perspective(500px) rotateY(-45deg) scale(0.95);
+
+    filter: drop-shadow(0 0 25px #0005) drop-shadow(0 0 45px #0005) 
+}
+
+.product-container .box.hovered 
+{
+    transform: perspective(500px) rotateY(0deg) scale(1.5);
+
+}
+
+
 
 .product-container .product-card {
     position: relative;
@@ -331,36 +374,39 @@ transition-delay: 0.6s;
     justify-content: center;
     align-items: flex-start;
     width: 350px;
-    height: 400px;
+    height: 200px;
     background: #fff;
     border-radius: 0 35px 80px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
-    transition:  1s ease-in-out; /* Smooth transition for size and shadow */
+    transition:  0.5s ease-in-out; /* Smooth transition for size and shadow */
 }
 
 .product-container .product-card:hover {
-    height: 400px;
+    height: 200px;
     transition: all 0.8s ease-in-out; /* Smooth transition for size and shadow */
 
 }
 
 .product-container .product-card .imgBx {
     position: absolute;
+    font-size: 1.5rem;
     margin-top: 10px;
-    top: 20px;
-    width: 300px;
-    height: 230px;
+    top: 10px;
+    width: 150px;
+    height: 130px;
     background: brown;
     border-radius: 12px;
     overflow: hidden;
-    transition: 0.8s; /* Smoother transition for image box */
+    transition: 0.5s; /* Smoother transition for image box */
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .product-container .product-card:hover .imgBx {
-    top: -100px;
+    width: 200px;
+    font-size: 1rem;
+    top: -50px;
     scale: 0.75;
-    transition: all 0.8s ease-in-out; /* Matching transition timing for consistency */
+    transition: all 0.5s ease-in-out; /* Matching transition timing for consistency */
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
@@ -375,7 +421,7 @@ transition-delay: 0.6s;
 
 .product-container .product-card .product-card-content {
     position: absolute;
-    top: 252px;
+    top: 120px;
     width: 100%;
     padding: 0 30px;
     height: 35px;
@@ -385,15 +431,15 @@ transition-delay: 0.6s;
 }
 
 .product-container .product-card:hover .product-card-content {
-    top: 130px;
-    height: 250px;
-    transition: all 0.8s ease-in-out; /* Consistent transition timing */
+    top: 30px;
+    height: 200px;
+    transition: all 0.5s ease-in-out; /* Consistent transition timing */
 }
 
-.product-container .product-card .product-card-content h2 {
-    font-size: 1.5rem;
+.product-container .product-card .product-card-content h2  {
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     color: #333;
 }
 
